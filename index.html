@@ -5,10 +5,28 @@
     <meta charset="utf-8"/>
     <title>Francisco Albani</title>
     <style>
-        
-        .row {
-          display: flex;
+        :root {
+            --tinta-negra: #39342c;
+            --tinta-roja:  #a43200;
+            --tinta-rosa:  #a3487a;
+            --tinta-oro:   #fbe8b0;
         }
+        header { font-family: cursive; } 
+        html {
+            color: var(--tinta-negra);
+            text-shadow: 0px 0px 2px #222222;
+            box-shadow: inset 0px 0px 100px 50px #c37921;
+            background: linear-gradient(-45deg, #E0C9A6, #cb8a30, #ead9ad);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            }
+        @keyframes gradient {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+            }
+
+        .row { display: flex; }
         
         .column {
           flex: 50%;
@@ -17,28 +35,44 @@
 
         ul {
             columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
+            column-gap: 40px;
+            list-style: upper-roman outside;
+            margin-left: 1em;
             }
+
+        h1, h2, h3 { font-family: cursive}
+        h1::first-letter, h2::first-letter, h3::first-letter {
+            font-family: cursive;
+            font-size: 200%;
+            text-shadow: 0px 0px 5px var(--tinta-oro);
+            color: var(--tinta-roja);
+        }
+        .terminal { font-family: monospace; }
+
+        a { text-decoration: none;  }
+        a:link    { color: #164a88; text-shadow: 0px 0px 1px #6981a2;}
+        a:visited { color: #684d5e; }
+        a:hover   { color: #5c62c2; text-shadow: 0px 0px 5px #fbe8b0;}
+        a:active  { color: #7f657e; }
+        ::selection {
+            color: #186549;
+            background: var(--tinta-oro);
+        }
     </style>
 </head>
 
 <body>
 
-<header><div align=center>Francisco Albani</div></header>
-<!--
-<nav>
-  <ul>
-    <li><a href="#personal">Personal</a></li>
-    <li><a href="#laboral">Laboral</a></li>
-  </ul>
-</nav>
--->
+<header>
+    <h1 align=center>Francisco Albani</h1>
+    <p align=center>Nací en Pergamino el 20 de Febrero de 1985, a las 13:45. Fueron testigos ☉, 🌑
+    <span style='font-family: monospace'>(769 BLN)</span>, ☿, ♀, ♂, ♃ y ⛢.</p>
+</header>
+
 <div class="row">
     <div class="column">
         <h1 id=personal>Personal</h1>
         
-        <p>Nací en Pergamino el 20 de Febrero de 1985, a las 13:45. Fueron testigos ☉, 🌑 (769 BLN), ☿, ♀, ♂, ♃ y ⛢.</p>
         
         <h2>Pasiones</h2>
 
@@ -89,7 +123,7 @@
         </ul>
         
         <h2>Alma mater</h2>
-        Estudié, trabajé y enseñé en la <a href=http://fi.uba.ar>Facultad de Ingeniería de la Universidad de Buenos Aires</a>,
+        Estudié, aprendí, enseñé y trabajé en la <a href=http://fi.uba.ar>Facultad de Ingeniería de la Universidad de Buenos Aires</a>,
         pero me faltan un puñado de materias para obtener el título de Ingeniero en Electrónica.
 
         <h2>Libros</h2>
@@ -127,7 +161,7 @@
         <ul>
             <li><a href=https://es.wikipedia.org/wiki/Halterofilia>Halterofilia</a></li>
             <li>Boxeo</li>
-            <li>Ajedrez (¿es un deporte? Sí, y más que eso. (Esta polémica es un buen ejemplo de los límites del lenguaje))</li>
+            <li>Ajedrez</li>
             <li>Natación</li>
         </ul>
 
@@ -150,7 +184,7 @@
     <div class="column">
         <h1 id=laboral>Laboral</h1>
         
-        Orientación hacia ingeniería en telecomunicaciones.
+        Orientación hacia Ingeniería en Telecomunicaciones.
 
         <h2>Filosofía</h2>
         
@@ -196,26 +230,28 @@
 
         <h3>Herramientas</h3>
         <ul>
-            <li>Linux (<a href=https://github.com/franalbani/archaic>archaic</a>)</li>
-            <li>GNU Radio (<a href=https://github.com/franalbani/gr-burstream>gr-burstream</a> y <a href=https://github.com/franalbani/gr-phychic>gr-phychic</a>)</li>
-            <li>git</li>
-            <li>Docker (<a href=https://github.com/franalbani/docksphor>docksphor</a>)</li>
-            <li>AWS</li>
+            <li class='terminal'>Linux (<a href=https://github.com/franalbani/archaic>archaic</a>)</li>
+            <li class='terminal'>GNU Radio (<a href=https://github.com/franalbani/gr-burstream>gr-burstream</a> y <a href=https://github.com/franalbani/gr-phychic>gr-phychic</a>)</li>
+            <li class='terminal'>git</li>
+            <li class='terminal'>Docker (<a href=https://github.com/franalbani/docksphor>docksphor</a>)</li>
+            <li class='terminal'>Wireguard (<a href=https://github.com/franalbani/faradaynet>faradaynet</a>)</li>
+            <li class='terminal'>nftables (<a href=https://github.com/franalbani/nftableson>nftableson</a>)</li>
         </ul>
 
         <h3>Lenguajes y protocolos</h3>
         <ul>
-            <li>Python (<a href=https://github.com/franalbani/fluxons>fluxons</a>)</li>
-            <li>Haskell</li>
-            <li>BASH</li>
-            <li>C/C++</li>
-            <li>SQL</li>
-            <li>HTML</li>
-            <li>HTTP</li>
-            <li>IP</li>
-            <li>TCP/UDP</li>
-            <li>ZMQ</li>
-            <li>DVB-S2 (<a href=https://github.com/franalbani/dvbs2adduceremecum>dvbs2adduceremecum</a>)</li>
+            <li class='terminal'>Python (<a href=https://github.com/franalbani/fluxons>fluxons</a>)</li>
+            <li class='terminal'>Haskell</li>
+            <li class='terminal'>BASH</li>
+            <li class='terminal'>C/C++</li>
+            <li class='terminal'>SQL</li>
+            <li class='terminal'>HTML + CSS</li>
+            <li class='terminal'>Javascript + React</li>
+            <li class='terminal'>HTTP</li>
+            <li class='terminal'>IP</li>
+            <li class='terminal'>TCP/UDP</li>
+            <li class='terminal'>ZMQ</li>
+            <li class='terminal'>DVB-S2 (<a href=https://github.com/franalbani/dvbs2adduceremecum>dvbs2adduceremecum</a>)</li>
         </ul>
         
         <h2>Conocimientos teóricos</h2>
@@ -242,8 +278,8 @@
     </div>
 </div>
 
-<footer>
-    <div align=center>Última actualización: 2022.07.24. Código en <a href=https://github.com/franalbani/franalbani.github.io>GitHub</a></div>
+<footer position=fixed>
+    <div align=center>Última actualización: 2022.10.01. Código en <a href=https://github.com/franalbani/franalbani.github.io>GitHub</a></div>
 </footer>
 </body>
 </html>
