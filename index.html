@@ -186,22 +186,38 @@
 
         <h2>Libros</h2>
         <ul>
-            <li>"Gödel, Escher, Bach", Douglas Hoftstadter</li>
-            <li>"Surely You're Joking, Mr. Feynman!", Richard Feynman</li>
-            <li>"Incerto", Nassim Taleb</li>
-            <li>"Body by Science", Doug McGuff y John Little</li>
-            <li>"The Fabric of Reality", David Deutsch</li>
-            <li>"How the World was One", Arthur C. Clarke</li>
-            <li>"The (mis)behaviour of Markets", Benoît Mandelbrot</li>
-            <li>"Fundación", Isaac Asimov</li>
-            <li>"1984", George Orwell</li>
-            <li>"Dune", Frank Herbert</li>
-            <li><a href=https://franalbani.github.io/glog/#/page/punished%20by%20rewards>"Punishmed by Rewards", Alfie Kohn</a></li>
-            <li><a href=https://franalbani.github.io/glog/#/page/finite%20and%20infinite%20games>"Finite and Infinite Games", James P. Carse</a></li>
-            <li>"Spiritual Enlightenment: The Damnedest Thing", Jed McKenna</li>
-            <li>"A new kind of Science", Stephen Wolfram</li>
-            <li>"Anathem", Neal Stephenson</li>
-            <li><a href=https://franalbani.github.io/glog/#/page/the%20timeless%20way%20of%20building>"The Timeless Way of Building", Christopher Alexander</a></li>
+        <script>
+        var p = document.currentScript.parentElement
+        const libros = [
+                ['Gödel, Escher, Bach', 'Douglas Hoftstadter'],
+                ['Surely You\'re Joking, Mr. Feynman!', 'Richard Feynman'],
+                ['Incerto', 'Nassim Taleb'],
+                ['Body by Science', 'Doug McGuff y John Little'],
+                ['The Fabric of Reality', 'David Deutsch'],
+                ['Beggining of Infinity', 'David Deutsch'],
+                ['How the World was One', 'Arthur C. Clarke'],
+                ['The (mis)behaviour of Markets', 'Benoît Mandelbrot'],
+                ['Fundación', 'Isaac Asimov'],
+                ['1984', 'George Orwell'],
+                ['Dune', 'Frank Herbert'],
+                ['Punished by Rewards', 'Alfie Kohn', 'https://franalbani.github.io/glog/#/page/punished%20by%20rewards'],
+                ['Finite and Infinite Games', 'James P. Carse', 'https://franalbani.github.io/glog/#/page/finite%20and%20infinite%20games'],
+                ['Spiritual Enlightenment: The Damnedest Thing', 'Jed McKenna'],
+                ['A new kind of Science', 'Stephen Wolfram'],
+                ['Anathem', 'Neal Stephenson'],
+                ['The Timeless Way of Building', 'Christopher Alexander', 'https://franalbani.github.io/glog/#/page/the%20timeless%20way%20of%20building'] ]
+        function makeli( [titulo, autor, link] ){
+                var li = document.createElement('li')
+                if (link) {
+                        li.innerHTML = '<a href="' + link + '">' + titulo + '</a>'
+                } else {
+                        li.innerHTML = titulo
+                }
+                li.innerHTML = '<em>' + li.innerHTML + '</em>, ' + autor
+                return li
+        }
+        libros.map(makeli).map((li) => p.appendChild(li))
+        </script>
         </ul>
 
         <h2>Huellas digitales</h2>
