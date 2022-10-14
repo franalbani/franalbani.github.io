@@ -68,7 +68,6 @@ h1::first-letter, h2::first-letter, h3::first-letter {
     text-shadow: 0px 0px 5px var(--tinta-oro);
     color: var(--tinta-roja);
 }
-.terminal { font-family: monospace; }
 
 a { text-decoration: none;  }
 a:link    {
@@ -84,7 +83,7 @@ a:active  { color: #7f657e; }
     background: var(--tinta-oro);
 }
 
-li:hover { text-shadow: none;}
+p:hover, li:hover { text-shadow: none;}
 footer {
     flex-shrink: 0;
     text-align: center;
