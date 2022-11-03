@@ -89,3 +89,7 @@ footer {
     text-align: center;
     font-family: monospace;
 }
+
+.tenebris:hover { 
+    color: var(--tinta-azul);*/
+}
