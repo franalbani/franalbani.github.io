@@ -22,12 +22,24 @@
 <div class='nofooter'>
     <header>
         <h1>Francisco Albani</h1>
-        <div>Nací en Pergamino el 20 de Febrero de 1985 A.D.,
-             a las 13:45. Fueron testigos ☀,
-             <abbr title='71050 HLN'>🌑</abbr>,
-             ☿, ♀, ♂, ♃ y ⛢.
-        </div>
     
+        <script>
+            function tenebris(x) {
+                if (x) {
+                    document.body.style.backgroundColor = '#694F29'
+                    document.body.style.color = 'white'
+                } else {
+                    document.body.style.backgroundColor = '#E0C9A6'
+                    document.body.style.color = 'var(--tinta-negra)'
+                }
+            }
+        </script>
+        <label for=tenebris>
+            <input type=checkbox id=tenebris checked='false'
+                   onchange='tenebris(this.checked)'>
+            TENEBRIS
+        </label>
+
         <nav>
             <a href=''>DOMUM ⌂</a> |
             <a href='#sum'>SUM Σ</a> |
@@ -221,6 +233,11 @@ y me sean devueltos los pliegues de mis barquitos.</p>
 
 <section id='sum'>
         
+        <div>Nací en Pergamino el 20 de Febrero de 1985 A.D., a las 13:45. Fueron testigos ☀,
+             <abbr title='71050 HLN'>🌑</abbr>,
+             ☿, ♀, ♂, ♃ y ⛢.
+        </div>
+
         <h1>Pasiones</h1>
 
         Las cosas sobre las que no me canso de aprender.
