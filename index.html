@@ -33,7 +33,9 @@
         <script>
             function candle_move(e) {
                 const candle = document.querySelector('.candle');
-                const spotlightSize = 'transparent 10px, rgba(0, 0, 0, 0.95) 400px)';
+                const inner_r = 10 + Math.floor(Math.random() * 30);
+                const outer_r = 350 + Math.floor(Math.random() * 60);
+                    const spotlightSize = `transparent ${inner_r}px, rgba(0, 0, 0, 0.95) ${outer_r}px)`;
                 candle.style.backgroundImage = `radial-gradient(circle at ${e.clientX / window.innerWidth * 100}% ${e.clientY / window.innerHeight * 100}%, ${spotlightSize}`;
             }
 
@@ -379,7 +381,7 @@ y me sean devueltos los pliegues de mis barquitos.</p>
 </div> <!-- nofooter -->
 
 <footer>
-Última actualización: 2022.10.14. Código en <a href=https://github.com/franalbani/franalbani.github.io>GitHub</a>
+Última actualización: 2022.11.03. Código en <a href=https://github.com/franalbani/franalbani.github.io>GitHub</a>
 </footer>
 
 <div class='candle'></div>
