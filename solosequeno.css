@@ -90,6 +90,30 @@ footer {
     font-family: monospace;
 }
 
+/*
 .tenebris:hover { 
-    color: var(--tinta-azul);*/
+    color: var(--tinta-azul);
+}*/
+
+.tenebris {
+  text-shadow: 0 0 10px #f9c13e, 0 0 20px #f9c13e, 0 0 30px #f9c13e, 0 0 40px #f9c13e, 0 0 50px #f9c13e, 0 0 60px #f9c13e, 0 0 70px #f9c13e;
+  color: #000000;
+  animation: glowing 2s ease-in-out infinite;
 }
+
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 10px #f9c13e, 0 0 20px #f9c13e, 0 0 30px #f9c13e, 0 0 40px #f9c13e, 0 0 50px #f9c13e, 0 0 60px #f9c13e, 0 0 70px #f9c13e;
+    }
+
+    50% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow: 0 0 10px #f9c13e, 0 0 20px #f9c13e, 0 0 30px #f9c13e, 0 0 40px #f9c13e, 0 0 50px #f9c13e, 0 0 60px #f9c13e, 0 0 70px #f9c13e;
+    }
+}
+
+
+
