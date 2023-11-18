@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Medieval';
-    src: url('PrinceValiant.ttf') format('truetype');
+    src: url('fuentes/PrinceValiant.ttf') format('truetype');
 }
 
 :root {
@@ -83,6 +83,8 @@ a:active  { color: #7f657e; }
     background: var(--tinta-oro);
 }
 
+p { text-indent: 3em; }
+
 p:hover, li:hover { text-shadow: none;}
 footer {
     flex-shrink: 0;
@@ -115,5 +117,6 @@ footer {
     }
 }
 
-
-
+section:target {
+  scroll-margin-top: 800px;
+}
